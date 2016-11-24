@@ -25,6 +25,7 @@
 		D40C8FF91DE67AED008B7801 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FF81DE67AED008B7801 /* SecondViewController.m */; };
 		D40C8FFC1DE67C4D008B7801 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FFB1DE67C4D008B7801 /* LeftViewController.m */; };
 		D40C8FFF1DE67C5C008B7801 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FFE1DE67C5C008B7801 /* RightViewController.m */; };
+		D40C90021DE69D63008B7801 /* CurrentInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C90011DE69D63008B7801 /* CurrentInformationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		D40C8FFB1DE67C4D008B7801 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftViewController.m; path = Controller/LeftViewController.m; sourceTree = "<group>"; };
 		D40C8FFD1DE67C5C008B7801 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightViewController.h; path = Controller/RightViewController.h; sourceTree = "<group>"; };
 		D40C8FFE1DE67C5C008B7801 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightViewController.m; path = Controller/RightViewController.m; sourceTree = "<group>"; };
+		D40C90001DE69D63008B7801 /* CurrentInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentInformationViewController.h; path = Controller/CurrentInformationViewController.h; sourceTree = "<group>"; };
+		D40C90011DE69D63008B7801 /* CurrentInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentInformationViewController.m; path = Controller/CurrentInformationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				D40C8FFB1DE67C4D008B7801 /* LeftViewController.m */,
 				D40C8FFD1DE67C5C008B7801 /* RightViewController.h */,
 				D40C8FFE1DE67C5C008B7801 /* RightViewController.m */,
+				D40C90001DE69D63008B7801 /* CurrentInformationViewController.h */,
+				D40C90011DE69D63008B7801 /* CurrentInformationViewController.m */,
 			);
 			name = OtherView;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				D40C8FE31DE677B7008B7801 /* MMDrawerBarButtonItem.m in Sources */,
 				D40C8FE61DE677B7008B7801 /* UIViewController+MMDrawerController.m in Sources */,
 				D40C8FB61DE67415008B7801 /* main.m in Sources */,
+				D40C90021DE69D63008B7801 /* CurrentInformationViewController.m in Sources */,
 				D40C8FF61DE67ADD008B7801 /* FirstViewController.m in Sources */,
 				D40C8FE41DE677B7008B7801 /* MMDrawerController.m in Sources */,
 				D40C8FD01DE67526008B7801 /* Globe.m in Sources */,

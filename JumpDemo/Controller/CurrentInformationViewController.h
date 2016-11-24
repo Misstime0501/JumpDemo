@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  CurrentInformationViewController.h
 //  JumpDemo
 //
 //  Created by Chen Li on 2016/11/24.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-@property (assign) NSInteger pageCount;
+@interface CurrentInformationViewController : UIViewController
+
 @end

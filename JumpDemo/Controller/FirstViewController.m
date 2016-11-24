@@ -13,7 +13,14 @@
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 
+#import "CurrentInformationViewController.h"
+
 @interface FirstViewController ()
+<UIPageViewControllerDataSource>
+@property (assign)             NSUInteger pageIndex;
+@property (nonatomic , strong) UIPageControl *pageControl;
+@property (nonatomic , strong) UIPageViewController *pageController;
+
 
 @property (nonatomic , strong) UIButton *titleButton;
 
@@ -22,11 +29,17 @@
 @implementation FirstViewController
 @synthesize titleButton = _titleButton;
 
+@synthesize pageIndex = _pageIndex;
+@synthesize pageCount = _pageCount;
+@synthesize pageControl = _pageControl;
+
 - (instancetype)init {
     self = [super init];
     if (self) {
         [self setRestorationIdentifier:RI_FIRST_VCRK];
         self.view.backgroundColor = [UIColor whiteColor];
+        _pageControl = [[UIPageControl alloc] init];
+        _pageCount = 4;
     }
     return self;
 }
@@ -34,6 +47,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self createPageController:0];
     
     [self createLeftButton];
     [self createRightButton];
@@ -46,6 +61,73 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
+}
+
+
+
+
+
+#pragma mark -
+
+- (void)createPageController:(NSInteger)index {
+
+
+    [_pageControl setNumberOfPages:_pageCount];
+
+
+    [_pageControl setCurrentPage:0];
+    [_pageControl setFrame:CGRectMake(50, 80, 100, 40)];
+    [_pageControl setPageIndicatorTintColor:[UIColor lightGrayColor]];
+    [_pageControl setCurrentPageIndicatorTintColor:[UIColor orangeColor]];
+    [_pageControl setBackgroundColor:[UIColor brownColor]];
+//    [self.view addSubview:_pageControl];
+    [[self view] addSubview:_pageControl];
+
+
+
+    // 设置翻页方式
+    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self.pageController.dataSource = self;
+    self.pageController.view.frame = CGRectMake(CGRectGetMinX(self.view.frame), CGRectGetMinY(self.view.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - CGRectGetHeight(self.tabBarController.tabBar.frame));
+
+    CurrentInformationViewController *currnet = [self viewControllerAtIndex:index];
+    [self.pageController setViewControllers:@[currnet] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self addChildViewController:self.pageController];
+    [self.view addSubview:self.pageController.view];
+    [self.pageController didMoveToParentViewController:self];
+
+}
+
+#pragma mark -
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+    return self.pageCount;
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+    return 0;
+}
+
+// 向前翻转
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    if ((_pageIndex == 0) || (_pageIndex == NSNotFound)) {
+        return nil;
+    }
+    _pageIndex--;
+    return [self viewControllerAtIndex:_pageIndex];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    if ((_pageIndex == self.pageCount) || (_pageIndex == NSNotFound)) {
+        return nil;
+    }
+    _pageIndex++;
+    return [self viewControllerAtIndex:_pageIndex];
+}
+
+- (CurrentInformationViewController *)viewControllerAtIndex:(NSUInteger)index{
+    CurrentInformationViewController *current = [[CurrentInformationViewController alloc] init];
+    return current;
 }
 
 #pragma mark -
