@@ -9,6 +9,14 @@
 #ifndef MacroOfDefine_Const_h
 #define MacroOfDefine_Const_h
 
+
+#define ZERO                                                        0
+#define SCREEN_SIZE                                                 [UIScreen mainScreen].bounds.size
+#define SCREEN_WIDTH                                                [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT                                               [UIScreen mainScreen].bounds.size.height
+
+
+
 #define RI_DRAWER_VCRK              @"DrawerControllerRestorationKey"
 
 #define RI_LEFT_VCRK                @"LeftViewControllerRestorationKey"
@@ -19,6 +27,9 @@
 
 
 #define CELL_HEIGHT                 67
+
+
+
 
 
 

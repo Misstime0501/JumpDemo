@@ -6,7 +6,8 @@
 //  Copyright © 2016年 Chen Li. All rights reserved.
 //
 
-#import "CurrentInformationViewController.h"
+#import "WeatherInformationViewController.h"
+
 #define COLOR_RGBA(r,g,b,a)             [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:a]
 #define COLOR_RGB(r,g,b)                [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1.0]
 #define COLOR_RANDOM                    COLOR_RGBA(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1.0)
@@ -15,16 +16,17 @@
 
 #define COLOR_RANDOM                    COLOR_RGBA(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1.0)
 
-@interface CurrentInformationViewController ()
+@interface WeatherInformationViewController ()
 
 @end
 
-@implementation CurrentInformationViewController
+@implementation WeatherInformationViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:COLOR_RANDOM];
+    [self.view setBackgroundColor:[UIColor blueColor]];
 }
 
 - (void)didReceiveMemoryWarning {

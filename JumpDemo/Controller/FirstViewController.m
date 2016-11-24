@@ -13,7 +13,7 @@
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 
-#import "CurrentInformationViewController.h"
+#import "WeatherInformationViewController.h"
 
 @interface FirstViewController ()
 <UIPageViewControllerDataSource>
@@ -37,7 +37,7 @@
     self = [super init];
     if (self) {
         [self setRestorationIdentifier:RI_FIRST_VCRK];
-        self.view.backgroundColor = [UIColor whiteColor];
+        self.view.backgroundColor = [UIColor clearColor];
         _pageControl = [[UIPageControl alloc] init];
         _pageCount = 4;
     }
@@ -54,8 +54,8 @@
     [self createRightButton];
     [self createTitleButton];
     
-    UIColor * barColor = [UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0];
-    [self.navigationController.navigationBar setBarTintColor:barColor];
+//    UIColor * barColor = [UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor clearColor]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,39 +63,31 @@
     
 }
 
-
-
-
-
 #pragma mark -
 
 - (void)createPageController:(NSInteger)index {
 
-
-    [_pageControl setNumberOfPages:_pageCount];
-
-
-    [_pageControl setCurrentPage:0];
-    [_pageControl setFrame:CGRectMake(50, 80, 100, 40)];
-    [_pageControl setPageIndicatorTintColor:[UIColor lightGrayColor]];
-    [_pageControl setCurrentPageIndicatorTintColor:[UIColor orangeColor]];
-    [_pageControl setBackgroundColor:[UIColor brownColor]];
-//    [self.view addSubview:_pageControl];
-    [[self view] addSubview:_pageControl];
-
-
+//    [_pageControl setNumberOfPages:_pageCount];
+//
+//    [_pageControl setCurrentPage:0];
+//    [_pageControl setFrame:CGRectMake(50, 80, 100, 40)];
+//    [_pageControl setPageIndicatorTintColor:[UIColor lightGrayColor]];
+//    [_pageControl setCurrentPageIndicatorTintColor:[UIColor orangeColor]];
+//    [_pageControl setBackgroundColor:[UIColor brownColor]];
+//    [[self view] addSubview:_pageControl];
 
     // 设置翻页方式
-    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+                                                          navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                                                                        options:nil];
     self.pageController.dataSource = self;
     self.pageController.view.frame = CGRectMake(CGRectGetMinX(self.view.frame), CGRectGetMinY(self.view.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - CGRectGetHeight(self.tabBarController.tabBar.frame));
-
-    CurrentInformationViewController *currnet = [self viewControllerAtIndex:index];
+    
+    WeatherInformationViewController *currnet = [self viewControllerAtIndex:index];
     [self.pageController setViewControllers:@[currnet] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     [self addChildViewController:self.pageController];
     [self.view addSubview:self.pageController.view];
     [self.pageController didMoveToParentViewController:self];
-
 }
 
 #pragma mark -
@@ -125,8 +117,8 @@
     return [self viewControllerAtIndex:_pageIndex];
 }
 
-- (CurrentInformationViewController *)viewControllerAtIndex:(NSUInteger)index{
-    CurrentInformationViewController *current = [[CurrentInformationViewController alloc] init];
+- (WeatherInformationViewController *)viewControllerAtIndex:(NSUInteger)index{
+    WeatherInformationViewController *current = [[WeatherInformationViewController alloc] init];
     return current;
 }
 

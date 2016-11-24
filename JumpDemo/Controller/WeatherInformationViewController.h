@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CurrentInformationViewController : UIViewController
+@interface WeatherInformationViewController : UIViewController
+
+
+
+
 
 @end

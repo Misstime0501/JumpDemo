@@ -12,9 +12,9 @@ static Globe *globe = nil;
 
 @interface Globe ()
 
-@property (atomic) CGFloat screenWidth;
-@property (atomic) CGFloat screenHeight;
-@property (atomic) BOOL    addCity;
+@property (nonatomic) CGFloat screenWidth;
+@property (nonatomic) CGFloat screenHeight;
+@property (nonatomic) BOOL    addCity;
 
 + (Globe *)sharedGlobe;
 
