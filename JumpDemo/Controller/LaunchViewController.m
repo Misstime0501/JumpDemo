@@ -38,7 +38,7 @@
                          _launchBackgroundImageView.frame = rect;
                      }
                      completion:^(BOOL finished) {
-//                         [JumpViewController createViewControllerWithIndex:0];
+                         [JumpViewController createViewControllerWithIndex:0];
                      }
      ];
 }

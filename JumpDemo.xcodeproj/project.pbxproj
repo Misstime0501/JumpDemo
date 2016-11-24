@@ -19,6 +19,12 @@
 		D40C8FE51DE677B7008B7801 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FE01DE677B7008B7801 /* MMDrawerVisualState.m */; };
 		D40C8FE61DE677B7008B7801 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FE21DE677B7008B7801 /* UIViewController+MMDrawerController.m */; };
 		D40C8FED1DE67836008B7801 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FEC1DE67836008B7801 /* LaunchViewController.m */; };
+		D40C8FF01DE67A0E008B7801 /* JumpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FEF1DE67A0E008B7801 /* JumpViewController.m */; };
+		D40C8FF31DE67A9A008B7801 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FF21DE67A9A008B7801 /* BasicViewController.m */; };
+		D40C8FF61DE67ADD008B7801 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FF51DE67ADD008B7801 /* FirstViewController.m */; };
+		D40C8FF91DE67AED008B7801 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FF81DE67AED008B7801 /* SecondViewController.m */; };
+		D40C8FFC1DE67C4D008B7801 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FFB1DE67C4D008B7801 /* LeftViewController.m */; };
+		D40C8FFF1DE67C5C008B7801 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C8FFE1DE67C5C008B7801 /* RightViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,18 @@
 		D40C8FE21DE677B7008B7801 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "Resource/MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		D40C8FEB1DE67836008B7801 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaunchViewController.h; path = Controller/LaunchViewController.h; sourceTree = "<group>"; };
 		D40C8FEC1DE67836008B7801 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaunchViewController.m; path = Controller/LaunchViewController.m; sourceTree = "<group>"; };
+		D40C8FEE1DE67A0E008B7801 /* JumpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JumpViewController.h; path = Controller/JumpViewController.h; sourceTree = "<group>"; };
+		D40C8FEF1DE67A0E008B7801 /* JumpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JumpViewController.m; path = Controller/JumpViewController.m; sourceTree = "<group>"; };
+		D40C8FF11DE67A9A008B7801 /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicViewController.h; path = Controller/BasicViewController.h; sourceTree = "<group>"; };
+		D40C8FF21DE67A9A008B7801 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicViewController.m; path = Controller/BasicViewController.m; sourceTree = "<group>"; };
+		D40C8FF41DE67ADD008B7801 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = Controller/FirstViewController.h; sourceTree = "<group>"; };
+		D40C8FF51DE67ADD008B7801 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = Controller/FirstViewController.m; sourceTree = "<group>"; };
+		D40C8FF71DE67AED008B7801 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = Controller/SecondViewController.h; sourceTree = "<group>"; };
+		D40C8FF81DE67AED008B7801 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = Controller/SecondViewController.m; sourceTree = "<group>"; };
+		D40C8FFA1DE67C4D008B7801 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftViewController.h; path = Controller/LeftViewController.h; sourceTree = "<group>"; };
+		D40C8FFB1DE67C4D008B7801 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftViewController.m; path = Controller/LeftViewController.m; sourceTree = "<group>"; };
+		D40C8FFD1DE67C5C008B7801 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightViewController.h; path = Controller/RightViewController.h; sourceTree = "<group>"; };
+		D40C8FFE1DE67C5C008B7801 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightViewController.m; path = Controller/RightViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +192,8 @@
 		D40C8FE71DE677F5008B7801 /* BasicNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				D40C8FF11DE67A9A008B7801 /* BasicViewController.h */,
+				D40C8FF21DE67A9A008B7801 /* BasicViewController.m */,
 			);
 			name = BasicNavigation;
 			sourceTree = "<group>";
@@ -190,6 +210,8 @@
 		D40C8FE91DE6780D008B7801 /* JumpView */ = {
 			isa = PBXGroup;
 			children = (
+				D40C8FEE1DE67A0E008B7801 /* JumpViewController.h */,
+				D40C8FEF1DE67A0E008B7801 /* JumpViewController.m */,
 			);
 			name = JumpView;
 			sourceTree = "<group>";
@@ -197,6 +219,14 @@
 		D40C8FEA1DE67817008B7801 /* OtherView */ = {
 			isa = PBXGroup;
 			children = (
+				D40C8FF41DE67ADD008B7801 /* FirstViewController.h */,
+				D40C8FF51DE67ADD008B7801 /* FirstViewController.m */,
+				D40C8FF71DE67AED008B7801 /* SecondViewController.h */,
+				D40C8FF81DE67AED008B7801 /* SecondViewController.m */,
+				D40C8FFA1DE67C4D008B7801 /* LeftViewController.h */,
+				D40C8FFB1DE67C4D008B7801 /* LeftViewController.m */,
+				D40C8FFD1DE67C5C008B7801 /* RightViewController.h */,
+				D40C8FFE1DE67C5C008B7801 /* RightViewController.m */,
 			);
 			name = OtherView;
 			sourceTree = "<group>";
@@ -272,14 +302,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40C8FF01DE67A0E008B7801 /* JumpViewController.m in Sources */,
+				D40C8FF91DE67AED008B7801 /* SecondViewController.m in Sources */,
 				D40C8FBC1DE67415008B7801 /* ViewController.m in Sources */,
 				D40C8FB91DE67415008B7801 /* AppDelegate.m in Sources */,
 				D40C8FED1DE67836008B7801 /* LaunchViewController.m in Sources */,
+				D40C8FFF1DE67C5C008B7801 /* RightViewController.m in Sources */,
 				D40C8FE31DE677B7008B7801 /* MMDrawerBarButtonItem.m in Sources */,
 				D40C8FE61DE677B7008B7801 /* UIViewController+MMDrawerController.m in Sources */,
 				D40C8FB61DE67415008B7801 /* main.m in Sources */,
+				D40C8FF61DE67ADD008B7801 /* FirstViewController.m in Sources */,
 				D40C8FE41DE677B7008B7801 /* MMDrawerController.m in Sources */,
 				D40C8FD01DE67526008B7801 /* Globe.m in Sources */,
+				D40C8FFC1DE67C4D008B7801 /* LeftViewController.m in Sources */,
+				D40C8FF31DE67A9A008B7801 /* BasicViewController.m in Sources */,
 				D40C8FE51DE677B7008B7801 /* MMDrawerVisualState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +473,7 @@
 				D40C8FCA1DE67415008B7801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
